@@ -27,6 +27,12 @@ int main() {
   //Número de Pontos Turísticos na cidade
   int PontosTuristicosA;
   int PontosTuristicosB;
+  //densidade populacional
+  float densidadeA;
+  float densidadeB;
+  //Pib Capital
+  float PibCapitalA;
+  float PibCapitalB;
   // Área para entrada de dados
   //carta A
   printf("Qual a letra do estado da carta A de A a H: ");
@@ -70,10 +76,16 @@ int main() {
 
   printf("Quantos pontos turisticos tem a carta B: ");
   scanf("%d", &PontosTuristicosB);
+  //calculo A
+  densidadeA = (float) PopulacaoA/AreaA;
+  PibCapitalA = (float) PibA/PopulacaoA; 
+  //calculo B
+  densidadeB = (float) PopulacaoB/AreaB;
+  PibCapitalB  = (float) PibB/PopulacaoB; 
   // Área para exibição dos dados da cidade
   //carta A
-  printf("A carta A:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n",EstadoA, EstadoA, CodigoA, NomeA, PopulacaoA, AreaA, PibA, PontosTuristicosA);
+  printf("A carta A:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %f \n Pib capital: %f \n",EstadoA, EstadoA, CodigoA, NomeA, PopulacaoA, AreaA, PibA, PontosTuristicosA, densidadeA, PibCapitalA);
   //carta B
-  printf("A carta B:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n",EstadoB, EstadoB, CodigoB, NomeB, PopulacaoB, AreaB, PibB, PontosTuristicosB);
+  printf("A carta B:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %.2Bf \n Pib capital: %.2f \n",EstadoB, EstadoB, CodigoB, NomeB, PopulacaoB, AreaB, PibB, PontosTuristicosB, densidadeB, PibCapitalB);
 return 0;
 } 
