@@ -33,6 +33,9 @@ int main() {
   //Pib Capital
   float PibCapitalA;
   float PibCapitalB;
+  //super poder
+  float superA;
+  float superB;
   // Área para entrada de dados
   //carta A
   printf("Qual a letra do estado da carta A de A a H: ");
@@ -79,13 +82,45 @@ int main() {
   //calculo A
   densidadeA = (float) PopulacaoA/AreaA;
   PibCapitalA = (float) PibA/PopulacaoA; 
+
+  superA = PopulacaoA + AreaA + PontosTuristicosA + PibCapitalA + (densidadeA * -1);
+
   //calculo B
   densidadeB = (float) PopulacaoB/AreaB;
   PibCapitalB  = (float) PibB/PopulacaoB; 
+
+  superB = PopulacaoB + AreaB + PontosTuristicosB + PibCapitalB + (densidadeB * -1);
+
   // Área para exibição dos dados da cidade
   //carta A
-  printf("A carta A:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %f \n Pib capital: %f \n",EstadoA, EstadoA, CodigoA, NomeA, PopulacaoA, AreaA, PibA, PontosTuristicosA, densidadeA, PibCapitalA);
+  printf("A carta A:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %f \n Pib capital: %f \n Super Poder: %f \n",EstadoA, EstadoA, CodigoA, NomeA, PopulacaoA, AreaA, PibA, PontosTuristicosA, densidadeA, PibCapitalA,superA);
   //carta B
-  printf("A carta B:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %.2Bf \n Pib capital: %.2f \n",EstadoB, EstadoB, CodigoB, NomeB, PopulacaoB, AreaB, PibB, PontosTuristicosB, densidadeB, PibCapitalB);
-return 0;
+  printf("A carta B:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %.2Bf \n Pib capital: %.2f \n Super Poder: %f \n",EstadoB, EstadoB, CodigoB, NomeB, PopulacaoB, AreaB, PibB, PontosTuristicosB, densidadeB, PibCapitalB, superB);
+  //resultado
+
+int resultadoPopulacao = PopulacaoA > PontosTuristicosB;
+
+int resultadoArea = AreaA > AreaB;
+
+int resultadoPib = PibA > PibB;
+
+int resultadoPonto = PontosTuristicosA > PontosTuristicosB;
+
+int resultadodensidade = densidadeA < densidadeB;
+
+int resultadoPibCapital = PibCapitalA > PibCapitalB;
+
+int resultadosuper = superA > superB;
+
+
+printf("resultado:\n população A:%d \n Area A:%d \n Pib A:%d \n Ponto Turisticos A: %d \n densidade populacional A : %d \n Pib capital A: %d \n super poder A: %d \n  "
+, resultadoPopulacao, resultadoArea, resultadoPib, resultadoPonto, resultadodensidade, resultadoPibCapital, resultadosuper );
+
+
+
+
+
+
+
+  return 0;
 } 
