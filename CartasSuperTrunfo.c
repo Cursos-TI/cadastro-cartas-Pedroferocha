@@ -113,8 +113,41 @@ int resultadoPibCapital = PibCapitalA > PibCapitalB;
 int resultadosuper = superA > superB;
 
 
-printf("resultado:\n população A:%d \n Area A:%d \n Pib A:%d \n Ponto Turisticos A: %d \n densidade populacional A : %d \n Pib capital A: %d \n super poder A: %d \n  "
-, resultadoPopulacao, resultadoArea, resultadoPib, resultadoPonto, resultadodensidade, resultadoPibCapital, resultadosuper );
+if (resultadoPopulacao){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadoArea){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadoPib){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadoPonto){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadodensidade){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadoPibCapital){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
+if (resultadosuper){
+  printf("carta A vençeu \n");
+}else{
+  printf("carta B venceu \n");
+}
 
 
 
