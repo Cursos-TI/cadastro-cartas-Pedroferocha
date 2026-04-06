@@ -98,7 +98,7 @@ int main() {
   printf("A carta B:\n Estado: %c \n Codigo: %c%s \n Nome: %s \n população: %d \n área: %f \n PIB: %f \n pontos turisticos: %d \n densidade populacional: %.2Bf \n Pib capital: %.2f \n Super Poder: %f \n",EstadoB, EstadoB, CodigoB, NomeB, PopulacaoB, AreaB, PibB, PontosTuristicosB, densidadeB, PibCapitalB, superB);
   //resultado
 
-int resultadoPopulacao = PopulacaoA > PontosTuristicosB;
+int resultadoPopulacao = PopulacaoA > PopulacaoB;
 
 int resultadoArea = AreaA > AreaB;
 
@@ -111,44 +111,105 @@ int resultadodensidade = densidadeA < densidadeB;
 int resultadoPibCapital = PibCapitalA > PibCapitalB;
 
 int resultadosuper = superA > superB;
+int Resultado;
+int escolha;
+printf("escolha qual quer comparar: \n");
+printf("1. População\n");
+printf("2. Area\n");
+printf("3. PIB\n");
+printf("4. Pontos turisticos\n");
+printf("5. Densidade\n");
+printf("6. PIb capital\n");
+printf("7. Super Poder\n");
+scanf("%d", &escolha);
+switch (escolha)
+{
+case 1:
+ if (resultadoPopulacao){
+  Resultado = 2;
+}else if(PopulacaoA > PopulacaoB){
+  Resultado = 1;
+}else{
+  Resultado = 0;
 
+}
+  break;
+  case 2:
+  if (resultadoArea){
+  Resultado = 2;
+}else if(AreaA > AreaB){
+  Resultado = 1;
+}else{
+  Resultado = 0;
 
-if (resultadoPopulacao){
-  printf("carta A vençeu \n");
-}else{
-  printf("carta B venceu \n");
 }
-if (resultadoArea){
-  printf("carta A vençeu \n");
+  break;
+  case 3:
+  if (resultadoPib){
+  Resultado = 2;
+}else if(PibA > PibB){
+  Resultado = 1;
 }else{
-  printf("carta B venceu \n");
+  Resultado = 0;
+
 }
-if (resultadoPib){
-  printf("carta A vençeu \n");
+  break;
+  case 4:
+   if (resultadoPonto){
+  Resultado = 2;
+}else if(PontosTuristicosB > PontosTuristicosB){
+  Resultado = 1;
 }else{
-  printf("carta B venceu \n");
+  Resultado = 0;
+
 }
-if (resultadoPonto){
-  printf("carta A vençeu \n");
+  break;
+  case 5:
+   if (resultadodensidade){
+  Resultado = 2;
+}else if(densidadeB < densidadeB){
+  Resultado = 1;
 }else{
-  printf("carta B venceu \n");
+  Resultado = 0;
+
 }
-if (resultadodensidade){
-  printf("carta A vençeu \n");
+  break;
+  case 6:
+    if (resultadoPibCapital){
+  Resultado = 2;
+}else if(PibCapitalA > PibCapitalB){
+  Resultado = 1;
 }else{
-  printf("carta B venceu \n");
+  Resultado = 0;
+
 }
-if (resultadoPibCapital){
-  printf("carta A vençeu \n");
+  break;
+  case 7:
+   if (resultadosuper){
+  Resultado = 2;
+}else if(superA > superB){
+  Resultado = 1;
 }else{
-  printf("carta B venceu \n");
+  Resultado = 0;
+
 }
-if (resultadosuper){
-  printf("carta A vençeu \n");
-}else{
-  printf("carta B venceu \n");
+  break;
+default:
+  break;
 }
 
+switch (Resultado)
+{
+case 2:
+  printf("A cidade %s ganhou da %s no atributo: %d",&NomeA, &NomeB, &escolha);
+  break;
+case 1:
+   printf("A cidade %s perdeu para %s no atributo: %d",&NomeA, &NomeB, &escolha);
+  break;
+default:
+  printf("A cidade %s empatou para %s no atributo: %d",&NomeA, &NomeB, &escolha);
+  break;
+}
 
 
 
